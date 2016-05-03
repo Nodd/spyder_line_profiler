@@ -418,7 +418,7 @@ class MemoryProfilerDataTree(QTreeWidget):
                 if l == '':
                     break
                 # split string (discard empty strings using filter)
-                stuff = filter(None, l.split(' '))
+                stuff = list(filter(None, l.split(' ')))
                 # get line number, mem usage, and mem increment
                 lineno = int(stuff[0])
                 if len(stuff) >= 5 and stuff[2] == 'MiB':
